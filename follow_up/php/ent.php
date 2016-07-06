@@ -21,7 +21,7 @@ if($data['referal'] != null)
         if($value==1 && checkColumnName($k))
         {
             $check+=$value;
-            $key=getColumnName($k);
+            $key=getColumnName($k,"ENT");
             $colName=$key['m_name'];
             if(in_array($k,$columnCheck))
             {
@@ -30,57 +30,32 @@ if($data['referal'] != null)
                     case "iw_r": 
                     case "iw_l":
                         {   if($data[$k."_com"])
-                                    $colName=$colName." - Impacted";
+                                    $colName=$colName." : Impacted";
                             else
-                                    $colName=$colName." - Unimpacted";
+                                    $colName=$colName." : Unimpacted";
                                 break;
                         }
                     case "ad":
                         {   if($data[$k."_com"])
-                                    $colName=$colName." - Allergic";
+                                    $colName=$colName." : Allergic";
                             else
-                                    $colName=$colName." - Infective";
+                                    $colName=$colName." : Infective";
                             break;
                         }
                     case "cleft_operated": 
                         {   if($data[$k."_com"])
-                                    $colName=$colName." - Operated";
+                                    $colName=$colName." : Operated";
                             else
-                                    $colName=$colName." - Not Operated";
+                                    $colName=$colName." : Not Operated";
                             break;
                         }            
                 }
             }
             array_push($colNames,$colName);
         }
-    }
+        }
     $output['colNames']=$colNames;
     $output['check']=$check;
-    
-    //Advise checking
-    $advice=array();
-    $adv=array_unique(explode(",",$data['impression']),SORT_REGULAR);
-    $ctr=0;
-    if( count($adv)>1 && in_array(0,$adv))
-    {
-        $ctr=1;
-    }
-    
-    foreach($adv as $k)
-    {   
-        if($k!=19 && $k!=0)
-            array_push($advice,$impression[$k]);
-        else if($ctr==0)
-        {
-            array_push($advice,$impression[0]);
-        }
-        else if(strpos($k, '19') !== false)
-        {
-            $other=explode(":",$k);
-            array_push($advice,$other[1]);
-        }
-    }
-    $output['advice']=$advice;
 }
 
 $output=json_encode($output);

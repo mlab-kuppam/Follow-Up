@@ -105,28 +105,19 @@ INSERT INTO `report` (`t_name`, `m_name`, `c_name`, `o_name`) VALUES
 ('health1', 'Trauma of Tooth', 'oe_trauma', 'Oral'),
 ('health1', 'Spacing', 'oe_spacing', 'Oral'),
 ('health1', 'corwding', 'oe_crowding', 'Oral'),
-('health1', 'Others Comments', 'oe_others', 'Oral'),
 ('health1', 'Chronic Cough', 'rs_chronic', 'General'),
 ('health1', 'Brochial Asthma', 'rs_bronchial', 'General'),
 ('health1', 'Adventitous Sounds', 'rs_sounds', 'General'),
-('health1', 'Others Comments', 'rs_others', 'General'),
 ('health1', 'Abnormal Heart Sounds', 'cvs_ahs', 'General'),
-('health1', 'Others Comments', 'cvs_others', 'General'),
 ('health2', 'H/O gastro-enteritis in Last 6 Months', 'gs_ag', 'General'),
 ('health2', 'H/O Worm Infestation in Last 6 Months', 'gs_wi', 'General'),
-('health2', 'Others Comments', 'gs_others', 'General'),
 ('health2', 'Deformities', 'ms_d', 'General'),
-('health2', 'Others Comments', 'ms_others', 'General'),
 ('health2', 'H/O Seizures', 'ns_s', 'General'),
-('health2', 'Others Comments', 'ns_others', 'General'),
 ('health2', 'ADHD', 'bp_adhd', 'General'),
-('health2', 'Others Comments', 'bp_others', 'General'),
 ('health2', 'UTI', 'gus_uti', 'General'),
 ('health2', 'Bedwetting', 'gus_bed', 'General'),
-('health2', 'Others Comments', 'gus_others', 'General'),
 ('health2', 'Vitamin C Deficiency', 'vt_c', 'General'),
-('health2', 'Vitamin B Complex Deficiency', 'vt_b', 'General'),
-('health2', 'Other Comments', 'vt_others', 'General');
+('health2', 'Vitamin B Complex Deficiency', 'vt_b', 'General');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

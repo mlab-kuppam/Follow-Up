@@ -19,12 +19,9 @@
 		
 		<!-- Vex Alert -->
 		<script src="vex-master/js/vex.combined.min.js"></script>
-		<script>vex.defaultOptions.className = 'vex-theme-os';</script>
+		<script>vex.defaultOptions.className = 'vex-theme-plain';</script>
 		<link rel="stylesheet" href="vex-master/css/vex.css" />
-		<link rel="stylesheet" href="vex-master/css/vex-theme-os.css" />
-		
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<link rel="stylesheet" href="vex-master/css/vex-theme-plain.css" />
 		
 	</head>
 

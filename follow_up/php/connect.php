@@ -1,8 +1,8 @@
 <?php
 	$mysql_hostname = "localhost";
 	$mysql_user = "root";
-	$mysql_password = "";
-	$mysql_database = "trialdb";
+	$mysql_password = "kuppam";
+	$mysql_database = "healthcaredb";
 	$prefix = "";
 	$bd = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
 	mysqli_select_db($bd,$mysql_database) or die("Could not select database");
@@ -29,11 +29,11 @@ $impression=array(
     18=> "Wear Full Sleeves While Sleeping");
 
 
-function getColumnName($cName)
+function getColumnName($cName,$oName)
 {
     global $conn;
         
-    $query="Select m_name from report where c_name='".$cName."'";
+    $query="Select `m_name` from report where c_name='$cName' and o_name='$oName'";
     $res=mysqli_query($conn,$query);
     $column=mysqli_fetch_assoc($res);
     return ($column);

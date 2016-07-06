@@ -1,6 +1,0 @@
-{
-    "jscodehints.detectedExclusions": [
-        "C:/xampp/htdocs/Follow Up/bower_components/datatables-plugins/api/fnVisibleToColumnIndex.js",
-        "C:/xampp/htdocs/Follow Up/bower_components/datatables-plugins/api/fnSetFilteringDelay.js"
-    ]
-}

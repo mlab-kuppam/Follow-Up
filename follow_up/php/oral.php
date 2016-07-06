@@ -17,10 +17,10 @@ if($data['oe_referal'] != null)
     $colNames=array();
     foreach($data as $k => $value)
     {
+       $key=getColumnName($k,"Oral");
         if($value==1 && checkColumnName($k) && strcmp($k,"oe_referal") && strpos($k, 'oe') !== false)
         {   
             $check +=$value;
-            $key=getColumnName($k);
             $colName=$key['m_name'];            
             array_push($colNames,$colName);
         }

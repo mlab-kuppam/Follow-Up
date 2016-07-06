@@ -33,6 +33,7 @@
 		text-decoration: none;
 		font-style: bold;
 		padding: 10px;
+		padding-left: 0px;
 	}
 	table#static-table tr td{
 		padding-top: 10px;
