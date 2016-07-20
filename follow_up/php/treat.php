@@ -2,7 +2,7 @@
 	require_once('connect.php');
 	
 	//Sanitize the POST values
-	$sid =50501224003;// $_POST['s'];
+	$sid = $_POST['s'];
 	//$sid = '20602021066';
 	//$sid = '20102003001';
 	//$sid = '20102003007';
@@ -64,4 +64,8 @@
 	//echo $result1L.$result2L.$result3L.$result4L;
 	//echo $result1.$result2.$result3.$result4;
 	echo $final;
+
+
+mysqli_close($conn);
+exit();
  ?>

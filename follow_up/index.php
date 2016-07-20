@@ -29,7 +29,7 @@
 
     <div class="container">
         <div class="row">
-			<center><h3>Welcome to Report Card Generation</h3></center>
+			<center><h3>Follow Up Login</h3></center>
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">

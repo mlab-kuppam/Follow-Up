@@ -48,4 +48,8 @@ if($data['referal'] != null)
 
 $output=json_encode($output);
 print_r($output);
+
+
+mysqli_close($conn);
+exit();
 ?>

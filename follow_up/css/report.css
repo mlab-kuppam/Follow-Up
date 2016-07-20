@@ -17,7 +17,7 @@
 		padding-bottom: 5px;
 		top: 3px;
 		right: 2px;
-		height: 5.5%;
+		height: 11%;
 	}
 	#pesimsr-logo{
 		float: left;
@@ -25,11 +25,11 @@
 		margin-top:25px;
 		top: 20px;
 		left: 15px;
-		height: 2.5%;
+		height: 4.9%;
 	}
 	.tableHead{
 		font-family:"tohoma";
-		font-size: 22px;
+		font-size: 18px;
 		text-decoration: none;
 		font-style: bold;
 		padding: 10px;
@@ -98,7 +98,7 @@
     }
 	
     /* Change the link color to #111 (black) on hover */
-    li#saveMe a:hover {
+    li#GetNewStudent a:hover {
         background-color: #f1c40f;
         color: white;
     }
@@ -112,10 +112,14 @@
         box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
+	.obsRadioGroup{
+		padding-left: 10mm;
+	}
+	.datePicker{
+		font-size: 16px;
+	}
     .page {
-        width: 210mm;
-        min-height: 297mm;
-        padding: 5mm;		
+        padding: 10mm;		
 		padding-top:15mm;
         margin: 0mm auto;
         border: 1px #D3D3D3 solid;
@@ -132,6 +136,32 @@
             width: 210mm;
             height: 297mm;        
         }
+		input,textarea {
+			border: none !important;
+			box-shadow: none !important;
+			outline: none !important;
+			
+		}
+		#pesit-logo{
+			height: 5.5%;
+		}
+		#pesimsr-logo{
+			height: 2.5%;
+		}
+		::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			color: transparent;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color: transparent;
+			opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color:transparent;
+			opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: transparent;
+		}
         .page {
             margin: 0;
             border: initial;
@@ -144,6 +174,12 @@
         }
 		div#treatment-div {
 			page-break-inside: avoid;
+		}
+		.diagPanel{
+			page-break-inside: avoid;
+		}
+		.diagButtons{
+			display: none;
 		}
 		button#treat-add{
 			display: none;

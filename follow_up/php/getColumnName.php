@@ -13,5 +13,7 @@
         $result=$rows['c_name'];
     }
     echo $result;
-    exit();
+    
+mysqli_close($conn);
+exit();
 ?>

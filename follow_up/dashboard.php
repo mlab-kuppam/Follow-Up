@@ -30,8 +30,8 @@
 					<ul>
 						<li style="float:left;"><p>Follow Up</p></li>
 						<li id="logMeOut"><a href="logout.php">Logout</a></li>
-					  	<li id="saveMe"><a onclick='newStudent()'>New Student</a></li>
-					  	<li id="saveMe"><a onclick='saveStudent()'>Save</a></li>
+					  	<li id="GetNewStudent"><a onclick='newStudent()'>Save and Next Student</a></li>
+					  	<!--<li id="saveMe"><a onclick='validate()'>Save</a></li>-->
 					</ul>
 			</div>
 			<div class="page">
@@ -45,54 +45,52 @@
 					<div class="well well-sm" >
 						<table id="static-table" class="table" rules="none" style="margin-bottom:0px">
 							<tr>
-								<td>Student Unique ID:  <b><span id="student_id"></span></b></td>
+								<td>Student Unique ID :  <b><span id="student_id"></span></b></td>
 								<td></td>
-								<td>Date:  <b><span id="date"></span></b></td>			
+								<td>Date :  <b><span id="date"></span></b></td>			
 							</tr>
 							<tr>
-								<td>Child Name:  <b><span id="cname"></span></b></td>
-								<td>Gender:  <b><span id="cgender"></span></b></td>
-								<td>Age:  <b><span id="cage"></span></b></td>			
+								<td>Child Name :  <b><span id="cname"></span></b></td>
+								<td>Gender :  <b><span id="cgender"></span></b></td>
+								<td>Age :  <b><span id="cage"></span></b></td>			
 							</tr>
 							<tr>
-								<td>Parent Name:  <b><span id="pname"></span></b></td>
+								<td>Parent Name :  <b><span id="pname"></span></b></td>
 								<td></td>
-								<td>Contact No.:  <b><span id="pmobile"></span></b></td>
+								<td>Contact No. :  <b><input id="pmobile" maxlength="10" contenteditable="true"/></b></td>
 							</tr>
 							<tr>
-								<td>School Name:  <b><span id="sname"></span></b></td>
+								<td>School Name :  <b><span id="sname"></span></b></td>
 								<td></td>
-								<td>Contact No.:  <b><span id="smobile"></span></b></td>
+								<td>Contact No. :  <b><input id="smobile" maxlength="10" contenteditable="true"/></b></td>
 							</tr>
 							<tr>
-								<td>Height:  <b><span id="height"></span></b></td>
-								<td></td>
-								<td>Weight:  <b><span id="weight"></span></b></td>
+								<td>Height :  <b><span id="height"></span></b></td>
+								<td>Weight :  <b><span id="weight"></span></b></td>
+								<td>Date of Initial Examination : <b><span id="dateIE"></span></b></td>
 							</tr>
 						</table>
 					</div>
 				</div>
 				<div class="panel panel-default" style="margins:0px">
-					<div class="panel-heading">Diagnosis</div>
+					<div class="panel-heading" style="font-size: 23px;">Diagnosis
+						<button class='btn btn-success btn-md diagButtons' style='float:right; margin-left:10mm ; width:100px;'  onclick='newTable()'>Add</button></div>
 					<div class="panel-body" >
-						<div id="diagnosis">
-						</div>
-						<div id="buttons"></div>
-					
+						<div id="diagnosis"></div>
 					</div>
 				</div>
 				
-				<p style="font-size:15px;"><center>- - - - - - - - - Cut Here - - - - - - - -<center></p>
+				<!--<p style="font-size:15px;"><center>- - - - - - - - - Cut Here - - - - - - - -<center></p>-->
 				
-				<div id="treatment-div" class="panel panel-default style="margins:0px"">
-					<div class="panel-heading">Prescription <span style="float:right;"><b><span id="student_id_pre"></b></span></div>
+				<div id="treatment-div" class="panel panel-default" style="margins:0px">
+					<div class="panel-heading" style="font-size: 23px;">Prescription <span style="float:right;"><b><span id="student_id_pre"></b></span></div>
 					<div class="panel-body">
 						<table class="table table-bordered" id="treat-table">
 						<thead>
-						  <tr>
+						  <tr id="treat-row-0">
 							<th><center>Medicine</center></th>
+							<th><center>Frequency</center></th>
 							<th><center>Duration</center></th>
-							<th><center>Period</center></th>
 							<th><center>Check Box</center></th>
 						  </tr>
 						</thead>
@@ -108,13 +106,10 @@
 		
 	</body>
 	
-	<script>
-		// Global data reciever
+	<script>// Global data reciever
 		var dataReceived;
 		var diagnosis = document.getElementById('diagnosis');
 		var buttons = document.getElementById('buttons');
-		var option1="Yes";
-		var option2="No";
 		var sid = <?php echo $_SESSION['sid'] ?> ;
 		//console.log("Stud_id: "+sid);
 		//console.log(window.location.hostname);

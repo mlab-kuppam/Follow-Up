@@ -12,4 +12,8 @@ $query="INSERT INTO `report_tracker`(`child_id`,`username`) VALUES ('".$sid."','
 
 $result=mysqli_query($conn,$query);
 echo 'sucessfull';
+
+
+mysqli_close($conn);
+exit();
 ?>

@@ -16,4 +16,7 @@ if($result1) {
 	echo 'unsucessfull';
 }
 
+
+mysqli_close($conn);
+exit();
 ?>
